@@ -2,6 +2,7 @@
 // Greedy local search that moves to best neighbor by heuristic. Needs params.heuristic map.
 module.exports.run = function runHillClimbing(req, res) {
   try {
+    console.log("Hill Climbing controller invoked");
     const body = req.body || {};
     const { nodes = [], edges = [], directed = false, start, goal, params = {} } = body;
     const heur = params.heuristic || {};

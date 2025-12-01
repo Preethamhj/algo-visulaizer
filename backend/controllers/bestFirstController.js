@@ -2,6 +2,7 @@
 // Greedy Best-First: prioritized solely by heuristic h(n)
 module.exports.run = function runBestFirst(req, res) {
   try {
+    console.log("Best-First Search controller invoked");
     const body = req.body || {};
     const { nodes = [], edges = [], directed = false, start, goal, params = {} } = body;
     const heur = params.heuristic || {};

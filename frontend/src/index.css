@@ -1,1 +1,42 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * Global Background and Typography 
+ * Using a deep blue/purple gradient for the futuristic feel 
+ */
+body {
+  background: linear-gradient(135deg, #10172A 0%, #1a2035 100%);
+  color: white; /* Ensure text is visible on the dark background */
+  min-height: 100vh;
+}
+
+/* * 🎨 The Glassmorphism Utility Class 
+ */
+.glass {
+  background-color: rgba(255, 255, 255, 0.05); /* Translucent background */
+  backdrop-filter: blur(10px); /* The core frosting effect */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Light border */
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Subtle shadow */
+  transition: all 0.3s ease;
+}
+
+.glass:hover {
+  box-shadow: 0 16px 64px 0 rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Custom styling for inputs/selects on a dark background */
+.glass-input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.2s;
+}
+
+.glass-input:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #8B5CF6; /* Purple-500 glow */
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.5);
+}

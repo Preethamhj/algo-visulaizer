@@ -2,6 +2,7 @@
 // Beam Search: breadth-level expansion keeping top-k nodes by heuristic each level
 module.exports.run = function runBeamSearch(req, res) {
   try {
+    console.log("Beam Search controller invoked");
     const body = req.body || {};
     const { nodes = [], edges = [], directed = false, start, goal, params = {} } = body;
     const beamWidth = params.beamWidth != null ? params.beamWidth : 2;

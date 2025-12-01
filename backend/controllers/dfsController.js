@@ -1,6 +1,7 @@
 // /server/controllers/dfsController.js
 module.exports.run = function runDFS(req, res) {
   try {
+    console.log("DFS controller invoked");
     const body = req.body || {};
     const { nodes = [], edges = [], directed = false, start, goal } = body;
     if (!start || !goal) return res.status(400).json({ error: "start and goal required" });

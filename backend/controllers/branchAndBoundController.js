@@ -2,6 +2,7 @@
 // Branch and Bound implemented as Uniform Cost Search (Dijkstra-like)
 module.exports.run = function runBranchAndBound(req, res) {
   try {
+    console.log("Branch and Bound controller invoked");
     const body = req.body || {};
     const { nodes = [], edges = [], directed = false, weighted = true, start, goal } = body;
     if (!start || !goal) return res.status(400).json({ error: "start and goal required" });

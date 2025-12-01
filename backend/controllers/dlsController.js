@@ -1,6 +1,7 @@
 // /server/controllers/dlsController.js
 module.exports.run = function runDLS(req, res) {
   try {
+    console.log("DLS controller invoked");
     const body = req.body || {};
     const { nodes = [], edges = [], directed = false, start, goal, params = {} } = body;
     const depthLimit = params.depthLimit != null ? params.depthLimit : 3;

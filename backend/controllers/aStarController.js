@@ -3,6 +3,7 @@
 // If params.heuristic not provided, defaults to 0 (behaves like Dijkstra if weighted true).
 module.exports.run = function runAstar(req, res) {
   try {
+    console.log("A* Search controller invoked");
     const body = req.body || {};
     const { nodes = [], edges = [], directed = false, weighted = false, start, goal, params = {} } = body;
     if (!start || !goal) return res.status(400).json({ error: "start and goal required" });
