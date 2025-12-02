@@ -14,7 +14,8 @@ export default function SidebarControls({
   run
 }) {
   return (
-    <div className="w-80 bg-[#121215] border-r border-gray-800 overflow-y-auto p-5">
+    <div className="w-80 glass neon-border overflow-y-auto p-5">
+
       
       {/* Algorithm Selector */}
       <div className="mb-6">
@@ -60,12 +61,13 @@ export default function SidebarControls({
       <HeuristicInput heuristics={heuristics} setHeuristics={setHeuristics} />
 
       {/* Run Button */}
-      <button
-        onClick={run}
-        className="w-full bg-blue-600 hover:bg-blue-500 py-3 mt-4 rounded-md shadow-lg text-white font-bold tracking-wide transition"
-      >
-        Run Algorithm
-      </button>
+     <button
+  onClick={run}
+  className="w-full neon-btn py-3 mt-4 rounded-md shadow-lg text-white font-bold tracking-wide"
+>
+  Run Algorithm ⚡
+</button>
+
     </div>
   );
 }

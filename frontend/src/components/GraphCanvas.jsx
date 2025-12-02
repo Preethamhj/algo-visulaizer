@@ -126,7 +126,7 @@ export default function GraphCanvas({ nodes, edges, steps, stepIndex }) {
   }, [nodes, edges, steps, stepIndex, size]);
 
   return (
-    <div ref={containerRef} className="flex-1 h-full w-full">
+    <div ref={containerRef}  className="flex-1 glass neon-border m-3 p-2 rounded-xl">
       <canvas
         ref={canvasRef}
         width={size.width}

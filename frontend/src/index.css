@@ -6,37 +6,49 @@
 /* * Global Background and Typography 
  * Using a deep blue/purple gradient for the futuristic feel 
  */
-body {
-  background: linear-gradient(135deg, #10172A 0%, #1a2035 100%);
-  color: white; /* Ensure text is visible on the dark background */
-  min-height: 100vh;
-}
-
-/* * 🎨 The Glassmorphism Utility Class 
- */
+/* === GLASS PANELS === */
 .glass {
-  background-color: rgba(255, 255, 255, 0.05); /* Translucent background */
-  backdrop-filter: blur(10px); /* The core frosting effect */
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Light border */
-  border-radius: 16px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Subtle shadow */
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.15);
+  border-radius: 12px;
 }
 
-.glass:hover {
-  box-shadow: 0 16px 64px 0 rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+/* === NEON BORDER === */
+.neon-border {
+  border: 1px solid rgba(0, 238, 255, 0.6);
+  box-shadow: 0 0 10px rgba(0, 238, 255, 0.5),
+              0 0 20px rgba(168, 85, 247, 0.3),
+              inset 0 0 10px rgba(0, 238, 255, 0.2);
 }
 
-/* Custom styling for inputs/selects on a dark background */
-.glass-input {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-  transition: all 0.2s;
+/* === NEON BUTTON === */
+.neon-btn {
+  background: linear-gradient(90deg, #00eaff33, #a855f733);
+  border: 1px solid rgba(0, 238, 255, 0.5);
+  box-shadow: 0 0 8px #00eaff88;
+  transition: 0.3s;
+}
+.neon-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px #00eaffbb;
+  border-color: #00eaff;
 }
 
-.glass-input:focus {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: #8B5CF6; /* Purple-500 glow */
-  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.5);
+/* === SCROLLBAR (minimal neon) ==== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#00eaff, #a855f7);
+  border-radius: 8px;
+}
+body {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.5px;
+}
+.neon-hover:hover {
+  box-shadow: 0 0 20px #00eaff, 0 0 40px #a855f7;
+  transition: 0.25s;
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function StepSidebar({ steps, stepIndex, setStepIndex }) {
   return (
-    <div className="w-80 bg-[#121215] border-l border-gray-800 overflow-y-auto p-4">
+<div className="w-80 glass neon-border p-4 backdrop-blur-xl">
 
       <h2 className="text-sm font-bold mb-3">Steps</h2>
 
@@ -31,7 +31,8 @@ export default function StepSidebar({ steps, stepIndex, setStepIndex }) {
             </div>
 
             {s.explanation && (
-              <div className="text-xs text-gray-500 mt-1">
+              <div className="glass p-3 mb-3 rounded-md border border-[#00eaff33] hover:border-[#00eaffaa] transition">
+
                 {s.explanation}
               </div>
             )}
