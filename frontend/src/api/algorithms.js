@@ -1,7 +1,7 @@
 // src/api/algorithms.js
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8000/api/run";
+const BASE_URL = "https://backendofalgovisualizer.onrender.com/";
 
 // canonical map: frontend names (many variants) -> backend endpoint
 const CANONICAL_MAP = {
